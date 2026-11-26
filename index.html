@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>2026 關西・廣島・岡山・京都 9 日旅</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700&family=Noto+Serif+TC:wght@600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #faf8f5;
+      --surface: #ffffff;
+      --surface-soft: #f4efe8;
+      --text: #1f2421;
+      --text-muted: #626863;
+      --accent: #b83b2a;
+      --accent-soft: #f9ebe8;
+      --secondary: #3f6256;
+      --secondary-soft: #e9f1ee;
+      --border: #e6dfd4;
+      --shadow: 0 4px 18px rgba(31, 36, 33, 0.06);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, #2b2421 0%, #4b2520 55%, #7a2e25 100%);
+      color: #fff;
+      padding: 3.2rem 1.25rem 2.6rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 85% 20%, rgba(255, 214, 170, 0.18), transparent 45%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      max-width: 920px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      padding: 0.25rem 0.8rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.9rem;
+    }
+
+    .hero h1 {
+      font-family: "Noto Serif TC", serif;
+      font-size: clamp(1.75rem, 4.5vw, 2.5rem);
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 0.6rem;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-dates {
+      font-size: 1.02rem;
+      color: rgba(255, 255, 255, 0.88);
+      margin-bottom: 1.25rem;
+    }
+
+    .route-pills {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.86rem;
+    }
+
+    .route-pill {
+      background: rgba(255, 255, 255, 0.14);
+      padding: 0.3rem 0.72rem;
+      border-radius: 999px;
+      backdrop-filter: blur(4px);
+    }
+
+    .route-arrow {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.85rem;
+    }
+
+    /* Sticky Nav */
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(250, 248, 245, 0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      max-width: 920px;
+      margin: 0 auto;
+      display: flex;
+      gap: 0.4rem;
+      overflow-x: auto;
+      padding: 0.65rem 1rem;
+      scrollbar-width: none;
+    }
+
+    .nav-inner::-webkit-scrollbar {
+      display: none;
+    }
+
+    .nav-link {
+      flex: 0 0 auto;
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.88rem;
+      font-weight: 500;
+      padding: 0.4rem 0.85rem;
+      border-radius: 999px;
+      transition: all 0.18s ease;
+    }
+
+    .nav-link:hover {
+      background: var(--surface-soft);
+      color: var(--text);
+    }
+
+    /* Layout */
+    main {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 1.8rem 1.1rem 4rem;
+    }
+
+    section {
+      margin-bottom: 2.6rem;
+      scroll-margin-top: 68px;
+    }
+
+    .section-title {
+      font-family: "Noto Serif TC", serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+    }
+
+    .section-title::before {
+      content: "";
+      width: 4px;
+      height: 1.2rem;
+      background: var(--accent);
+      border-radius: 4px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem 1.3rem;
+      box-shadow: var(--shadow);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .tag {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.18rem 0.6rem;
+      border-radius: 999px;
+      white-space: nowrap;
+    }
+
+    .tag-red {
+      background: var(--accent-soft);
+      color: var(--accent);
+    }
+
+    .tag-green {
+      background: var(--secondary-soft);
+      color: var(--secondary);
+    }
+
+    .tag-neutral {
+      background: var(--surface-soft);
+      color: var(--text-muted);
+    }
+
+    /* Flight Card */
+    .flight-code {
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .flight-route {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0.9rem 0 0.75rem;
+      padding: 0.8rem 0.9rem;
+      background: var(--bg);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+    }
+
+    .airport-code {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .airport-time {
+      font-size: 0.92rem;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .airport-sub {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .flight-mid {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      padding: 0 0.5rem;
+    }
+
+    .meta-note {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Day Filter */
+    .day-filter {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+      margin-bottom: 1.1rem;
+    }
+
+    .filter-btn {
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text-muted);
+      font-family: inherit;
+      font-size: 0.83rem;
+      font-weight: 500;
+      padding: 0.38rem 0.78rem;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.16s ease;
+    }
+
+    .filter-btn:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    .filter-btn.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    /* Day Cards */
+    .day-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.95rem;
+    }
+
+    .day-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.15rem 1.3rem;
+      box-shadow: var(--shadow);
+    }
+
+    .day-card.hidden {
+      display: none;
+    }
+
+    .day-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 0.5rem;
+      padding-bottom: 0.7rem;
+      margin-bottom: 0.85rem;
+      border-bottom: 1px dashed var(--border);
+    }
+
+    .day-heading {
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .day-date {
+      color: var(--accent);
+      margin-right: 0.4rem;
+    }
+
+    .slots {
+      display: grid;
+      gap: 0.55rem;
+    }
+
+    .slot {
+      display: grid;
+      grid-template-columns: 56px 1fr;
+      gap: 0.65rem;
+      align-items: baseline;
+      font-size: 0.93rem;
+    }
+
+    .slot-label {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--surface-soft);
+      text-align: center;
+      padding: 0.14rem 0.4rem;
+      border-radius: 6px;
+    }
+
+    .slot-empty {
+      color: #9b978f;
+      font-style: italic;
+    }
+
+    /* Place Cards */
+    .place-title {
+      font-size: 1.04rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .place-meta {
+      font-size: 0.86rem;
+      color: var(--text-muted);
+      margin-bottom: 0.85rem;
+    }
+
+    .map-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      text-decoration: none;
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: var(--secondary);
+      background: var(--secondary-soft);
+      padding: 0.42rem 0.85rem;
+      border-radius: 999px;
+      transition: background 0.18s ease;
+    }
+
+    .map-btn:hover {
+      background: #dce9e4;
+    }
+
+    /* Mermaid Container */
+    .mermaid-wrap {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.2rem;
+      box-shadow: var(--shadow);
+      overflow-x: auto;
+    }
+
+    .mermaid {
+      min-width: 640px;
+      display: flex;
+      justify-content: center;
+    }
+
+    /* Tips */
+    .tips-list {
+      list-style: none;
+      display: grid;
+      gap: 0.65rem;
+    }
+
+    .tips-list li {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--secondary);
+      border-radius: 10px;
+      padding: 0.8rem 1rem;
+      font-size: 0.92rem;
+    }
+
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.82rem;
+      padding: 1.5rem 1rem 2.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 560px) {
+      .hero {
+        padding: 2.4rem 1rem 2rem;
+      }
+      .card, .day-card {
+        padding: 1rem 1.05rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <span class="hero-badge">JAPAN AUTUMN / WINTER TRIP · 9 DAYS 8 NIGHTS</span>
+      <h1>2026 關西・廣島・岡山・京都 9 日旅</h1>
+      <p class="hero-dates">2026/11/28（六）— 2026/12/06（日）</p>
+      <div class="route-pills">
+        <span class="route-pill">✈ 台北 TPE</span>
+        <span class="route-arrow">→</span>
+        <span class="route-pill">臨空城 (1晚)</span>
+        <span class="route-arrow">→</span>
+        <span class="route-pill">廣島・宮島 (2晚)</span>
+        <span class="route-arrow">→</span>
+        <span class="route-pill">岡山 (2晚)</span>
+        <span class="route-arrow">→</span>
+        <span class="route-pill">京都 (3晚)</span>
+        <span class="route-arrow">→</span>
+        <span class="route-pill">✈ 台北 TPE</span>
+      </div>
+    </div>
+  </header>
+
+  <nav class="sticky-nav" aria-label="章節導覽">
+    <div class="nav-inner">
+      <a class="nav-link" href="#flights">✈ 航班與接送</a>
+      <a class="nav-link" href="#itinerary">📅 每日行程</a>
+      <a class="nav-link" href="#hotels">🏨 住宿總覽</a>
+      <a class="nav-link" href="#dining">🍽 已預約餐廳</a>
+      <a class="nav-link" href="#flow">🗺 行程流程圖</a>
+      <a class="nav-link" href="#tips">🧣 旅遊提醒</a>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Flights -->
+    <section id="flights">
+      <h2 class="section-title">航班與機場接送</h2>
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="flight-code">中華航空 CI0172</div>
+              <div class="meta-note">2026/11/28（六）去程</div>
+            </div>
+            <span class="tag tag-red">去程</span>
+          </div>
+          <div class="flight-route">
+            <div>
+              <div class="airport-code">TPE</div>
+              <div class="airport-time">14:20</div>
+              <div class="airport-sub">桃園機場 T2</div>
+            </div>
+            <div class="flight-mid">✈<br />約 2h 30m</div>
+            <div style="text-align: right;">
+              <div class="airport-code">KIX</div>
+              <div class="airport-time">17:50</div>
+              <div class="airport-sub">關西機場 T1</div>
+            </div>
+          </div>
+          <p class="meta-note">🚗 <strong>已預約機場接送</strong>：11/28 11:20 台北出發前往桃園機場 T2（航班時刻暫依常態班表，請以機票為準）。</p>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <div class="flight-code">中華航空 CI0157</div>
+              <div class="meta-note">2026/12/06（日）回程</div>
+            </div>
+            <span class="tag tag-green">回程</span>
+          </div>
+          <div class="flight-route">
+            <div>
+              <div class="airport-code">KIX</div>
+              <div class="airport-time">12:45</div>
+              <div class="airport-sub">關西機場 T1</div>
+            </div>
+            <div class="flight-mid">✈<br />約 3h 15m</div>
+            <div style="text-align: right;">
+              <div class="airport-code">TPE</div>
+              <div class="airport-time">15:00</div>
+              <div class="airport-sub">桃園機場 T2</div>
+            </div>
+          </div>
+          <p class="meta-note">🚆 <strong>回程交通提醒</strong>：建議 09:00 前由京都車站搭乘 JR 特急 HARUKA 前往關西機場 T1（車程約 75 分鐘）。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Daily Itinerary -->
+    <section id="itinerary">
+      <h2 class="section-title">每日行程</h2>
+      <div class="day-filter" role="tablist" aria-label="篩選天數">
+        <button class="filter-btn active" data-day="all">全部 9 天</button>
+        <button class="filter-btn" data-day="1">Day 1 · 11/28</button>
+        <button class="filter-btn" data-day="2">Day 2 · 11/29</button>
+        <button class="filter-btn" data-day="3">Day 3 · 11/30</button>
+        <button class="filter-btn" data-day="4">Day 4 · 12/01</button>
+        <button class="filter-btn" data-day="5">Day 5 · 12/02</button>
+        <button class="filter-btn" data-day="6">Day 6 · 12/03</button>
+        <button class="filter-btn" data-day="7">Day 7 · 12/04</button>
+        <button class="filter-btn" data-day="8">Day 8 · 12/05</button>
+        <button class="filter-btn" data-day="9">Day 9 · 12/06</button>
+      </div>
+
+      <div class="day-list">
+        <article class="day-card" data-day="1">
+          <div class="day-top">
+            <div class="day-heading"><span class="day-date">Day 1 · 11/28 (六)</span>抵達關西機場 → 臨空城</div>
+            <span class="tag tag-neutral">宿：OMO 關西機場</span>
+          </div>
+          <div class="slots">
+            <div class="slot"><span class="slot-label">上午</span><span>11:20 機場接送出發 → 前往桃園機場第二航廈（T2）辦理報到</span></div>
+            <div class="slot"><span class="slot-label">下午</span><span>14:20 搭乘中華航空 CI0172 飛往關西國際機場（KIX T1），預計 17:50 抵達</span></div>
+            <div class="slot"><span class="slot-label">晚上</span><span>入境領行李 → 搭 JR／南海電鐵至臨空城站（1 站）→ OMO 關西機場 Check-in → 臨空城周邊晚餐</span></div>
+          </div>
+        </article>
+
+        <article class="day-card" data-day="2">
+          <div class="day-top">
+            <div class="day-heading"><span class="day-date">Day 2 · 11/29 (日)</span>臨空城 → 廣島・宮島</div>
+            <span class="tag tag-red">宿：界 宮島</span>
+          </div>
+          <div class="slots">
+            <div class="slot"><span class="slot-label">上午</span><span>OMO 關西機場 Check-out → 經新大阪轉乘山陽新幹線前往廣島</span></div>
+            <div class="slot"><span class="slot-label">下午</span><span>轉乘 JR 山陽本線至宮島口站（或前空站）→ 界 宮島（KAI Miyajima）Check-in（14:30 起）</span></div>
+            <div class="slot"><span class="slot-label">晚上</span><span>界 宮島館內溫泉、晚餐</span></div>
+          </div>
+        </article>
+
+        <article class="day-card" data-day="3">
+          <div class="day-top">
+            <div class="day-heading"><span class="day-date">Day 3 · 11/30 (一)</span>廣島・宮島</div>
+            <span class="tag tag-red">宿：界 宮島</span>
+          </div>
+          <div class="slots">
+            <div class="slot"><span class="slot-label">上午</span><span class="slot-empty">行程待排（可預約旅館專屬碼頭船班直達宮島／嚴島神社）</span></div>
+            <div class="slot"><span class="slot-label">下午</span><span class="slot-empty">行程待排</span></div>
+            <div class="slot"><span class="slot-label">晚上</span><span>續住 界 宮島（KAI Miyajima）</span></div>
+          </div>
+        </article>
+
+        <article class="day-card" data-day="4">
+          <div class="day-top">
+            <div class="day-heading"><span class="day-date">Day 4 · 12/01 (二)</span>廣島 → 岡山</div>
+            <span class="tag tag-green">宿：岡山全日空皇冠假日</span>
+          </div>
+          <div class="slots">
+            <div class="slot"><span class="slot-label">上午</span><span>界 宮島 Check-out（11:00 前）→ 搭山陽新幹線前往岡山</span></div>
+            <div class="slot"><span class="slot-label">下午</span><span>岡山全日空皇冠假日酒店 Check-in（JR 岡山站直結）</span></div>
+            <div class="slot"><span class="slot-label">晚上</span><span>🍽 <strong>18:30 晚餐：岡山 VIA PACE（已預約）</strong></span></div>
+          </div>
+        </article>
+
+        <article class="day-card" data-day="5">
+          <div class="day-top">
+            <div class="day-heading"><span class="day-date">Day 5 · 12/02 (三)</span>岡山周邊</div>
+            <span class="tag tag-green">宿：岡山全日空皇冠假日</span>
+          </div>
+          <div class="slots">
+            <div class="slot"><span class="slot-label">上午</span><span class="slot-empty">行程待排（岡山後樂園／岡山城／倉敷美觀地區等）</span></div>
+            <div class="slot"><span class="slot-label">下午</span><span class="slot-empty">行程待排</span></div>
+            <div class="slot"><span class="slot-label">晚上</span><span>續住 岡山全日空皇冠假日酒店</span></div>
+          </div>
+        </article>
+
+        <article class="day-card" data-day="6">
+          <div class="day-top">
+            <div class="day-heading"><span class="day-date">Day 6 · 12/03 (四)</span>岡山 → 京都</div>
+            <span class="tag tag-neutral">宿：京都（待定）</span>
+          </div>
+          <div class="slots">
+            <div class="slot"><span class="slot-label">上午</span><span>岡山全日空皇冠假日酒店 Check-out（11:00 前）→ 搭新幹線前往京都</span></div>
+            <div class="slot"><span class="slot-label">下午</span><span class="slot-empty">京都飯店寄放行李／Check-in、市區行程待排</span></div>
+            <div class="slot"><span class="slot-label">晚上</span><span class="slot-empty">行程待排</span></div>
+          </div>
+        </article>
+
+        <article class="day-card" data-day="7">
+          <div class="day-top">
+            <div class="day-heading"><span class="day-date">Day 7 · 12/04 (五)</span>京都</div>
+            <span class="tag tag-neutral">宿：京都（待定）</span>
+          </div>
+          <div class="slots">
+            <div class="slot"><span class="slot-label">上午</span><span class="slot-empty">行程待排</span></div>
+            <div class="slot"><span class="slot-label">下午</span><span class="slot-empty">行程待排</span></div>
+            <div class="slot"><span class="slot-label">晚上</span><span>🍽 <strong>18:45 晚餐：京的燒肉處 弘 千本三條本店（已預約）</strong></span></div>
+          </div>
+        </article>
+
+        <article class="day-card" data-day="8">
+          <div class="day-top">
+            <div class="day-heading"><span class="day-date">Day 8 · 12/05 (六)</span>京都</div>
+            <span class="tag tag-neutral">宿：京都（待定）</span>
+          </div>
+          <div class="slots">
+            <div class="slot"><span class="slot-label">上午</span><span class="slot-empty">行程待排</span></div>
+            <div class="slot"><span class="slot-label">下午</span><span class="slot-empty">行程待排</span></div>
+            <div class="slot"><span class="slot-label">晚上</span><span class="slot-empty">行程待排</span></div>
+          </div>
+        </article>
+
+        <article class="day-card" data-day="9">
+          <div class="day-top">
+            <div class="day-heading"><span class="day-date">Day 9 · 12/06 (日)</span>京都 → 關西機場 → 返台</div>
+            <span class="tag tag-green">返台</span>
+          </div>
+          <div class="slots">
+            <div class="slot"><span class="slot-label">上午</span><span>飯店 Check-out → 建議 09:00 前由京都車站搭 JR HARUKA 前往關西機場（KIX T1）報到</span></div>
+            <div class="slot"><span class="slot-label">下午</span><span>12:45 搭乘中華航空 CI0157 返台，預計 15:00 抵達桃園機場（TPE T2）</span></div>
+            <div class="slot"><span class="slot-label">晚上</span><span>平安返家</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Hotels -->
+    <section id="hotels">
+      <h2 class="section-title">住宿總覽</h2>
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-header">
+            <div class="place-title">OMO 關西機場 by 星野集團</div>
+            <span class="tag tag-neutral">11/28 – 11/29（1 晚）</span>
+          </div>
+          <p class="place-meta">
+            📍 臨空城站（Rinku-Town）步行約 1 分鐘<br />
+            🕒 Check-in 15:00 ／ Check-out 11:00
+          </p>
+          <a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=OMO%E9%96%A2%E8%A5%BF%E7%A9%BA%E6%B8%AF+by+%E6%98%9F%E9%87%8E%E3%83%AA%E3%82%BE%E3%83%BC%E3%83%88">📍 開啟 Google Maps</a>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="place-title">界 宮島（KAI Miyajima）</div>
+            <span class="tag tag-red">11/29 – 12/01（2 晚）</span>
+          </div>
+          <p class="place-meta">
+            📍 広島県廿日市市宮島口西1-1-6（JR 前空站步行 12 分／宮島口站計程車 4 分）<br />
+            🕒 Check-in 14:30 ／ Check-out 11:00<br />
+            ⛵ 位於本州對岸「宮島口西」，旅館前方有專屬碼頭可預約搭船直達宮島。
+          </p>
+          <a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E7%95%8C+%E5%AE%AE%E5%B3%B6+%E5%BA%83%E5%B3%B6%E7%9C%8C%E5%BB%BF%E6%97%A5%E5%B8%82%E5%B8%82%E5%AE%AE%E5%B3%B6%E5%8F%A3%E8%A5%BF1-1-6">📍 開啟 Google Maps</a>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="place-title">岡山全日空皇冠假日酒店</div>
+            <span class="tag tag-green">12/01 – 12/03（2 晚）</span>
+          </div>
+          <p class="place-meta">
+            📍 ANA Crowne Plaza Okayama（JR 岡山站直結步行約 1 分鐘）<br />
+            🕒 Check-in 15:00 ／ Check-out 11:00
+          </p>
+          <a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=ANA+Crowne+Plaza+Okayama">📍 開啟 Google Maps</a>
+        </div>
+
+        <div class="card" style="border-style: dashed; background: var(--bg);">
+          <div class="card-header">
+            <div class="place-title">京都住宿（待確認）</div>
+            <span class="tag tag-neutral">12/03 – 12/06（3 晚）</span>
+          </div>
+          <p class="place-meta">
+            📍 京都市區（確認飯店後更新）<br />
+            🕒 Check-in 15:00 ／ Check-out 11:00
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dining -->
+    <section id="dining">
+      <h2 class="section-title">已預約餐廳</h2>
+      <div class="grid-2">
+        <div class="card">
+          <div class="card-header">
+            <div class="place-title">岡山 VIA PACE（ヴィア パーチェ）</div>
+            <span class="tag tag-green">12/01 (二) 18:30</span>
+          </div>
+          <p class="place-meta">
+            📍 岡山県岡山市北区平和町5-24 アシモ西川ビル1F<br />
+            🚶 JR 岡山站步行約 5–8 分鐘（距全日空皇冠假日酒店很近）
+          </p>
+          <a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=VIA+PACE+%E5%B2%A1%E5%B1%B1%E7%9C%8C%E5%B2%A1%E5%B1%B1%E5%B8%82%E5%8C%97%E5%8C%BA%E5%B9%B3%E5%92%8C%E7%94%BA5-24">📍 開啟 Google Maps</a>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="place-title">京的燒肉處 弘 千本三條本店</div>
+            <span class="tag tag-red">12/04 (五) 18:45</span>
+          </div>
+          <p class="place-meta">
+            📍 京都府京都市中京区壬生朱雀町2-6（三条会商店街）<br />
+            🚶 JR／地鐵「二條站」步行約 5–6 分鐘
+          </p>
+          <a class="map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=%E4%BA%AC%E3%81%AE%E7%84%BC%E8%82%89%E5%87%A6+%E5%BC%98+%E5%8D%83%E6%9C%AC%E4%B8%89%E6%9D%A1%E6%9C%AC%E5%BA%97">📍 開啟 Google Maps</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mermaid Flow -->
+    <section id="flow">
+      <h2 class="section-title">每日行程流程圖</h2>
+      <div class="mermaid-wrap">
+        <div class="mermaid">
+sequenceDiagram
+    participant TPE as 台北 / 桃園機場
+    participant KIX as 關西機場 / 臨空城
+    participant HIJ as 廣島・宮島
+    participant OKJ as 岡山
+    participant KYO as 京都
+
+    Note over TPE,KIX: Day 1 - 11/28 (六)
+    TPE->>TPE: 11:20 機場接送出發 → 桃機 T2
+    TPE->>KIX: 14:20 CI0172 起飛 → 17:50 抵達 KIX T1
+    KIX->>KIX: 搭 JR/南海電鐵至臨空城站 → 入住 OMO 關西機場
+
+    Note over KIX,HIJ: Day 2 - 11/29 (日)
+    KIX->>HIJ: OMO 退房 → 經新大阪搭山陽新幹線至廣島/宮島口
+    HIJ->>HIJ: 14:30 起入住 界 宮島（KAI Miyajima）
+
+    Note over HIJ: Day 3 - 11/30 (一)
+    HIJ->>HIJ: 廣島・宮島一日遊（續住 界 宮島）
+
+    Note over HIJ,OKJ: Day 4 - 12/01 (二)
+    HIJ->>OKJ: 11:00 前退房 → 搭山陽新幹線前往岡山
+    OKJ->>OKJ: 入住 岡山全日空皇冠假日酒店
+    OKJ->>OKJ: 18:30 晚餐：VIA PACE（已預約）
+
+    Note over OKJ: Day 5 - 12/02 (三)
+    OKJ->>OKJ: 岡山周邊行程（續住 全日空皇冠假日酒店）
+
+    Note over OKJ,KYO: Day 6 - 12/03 (四)
+    OKJ->>KYO: 11:00 前退房 → 搭新幹線前往京都
+    KYO->>KYO: 入住京都飯店（待定）
+
+    Note over KYO: Day 7 - 12/04 (五)
+    KYO->>KYO: 京都市區行程
+    KYO->>KYO: 18:45 晚餐：京的燒肉處 弘 千本三條本店（已預約）
+
+    Note over KYO: Day 8 - 12/05 (六)
+    KYO->>KYO: 京都行程（續住京都）
+
+    Note over KYO,TPE: Day 9 - 12/06 (日)
+    KYO->>KIX: 退房 → 建議 09:00 前搭 JR HARUKA 往 KIX T1
+    KIX->>TPE: 12:45 CI0157 起飛 → 15:00 抵達桃機 T2
+        </div>
+      </div>
+    </section>
+
+    <!-- Tips -->
+    <section id="tips">
+      <h2 class="section-title">12 月旅遊與交通提醒</h2>
+      <ul class="tips-list">
+        <li><strong>氣候與穿搭</strong>：11 月底至 12 月初京都／廣島／岡山氣溫約 <strong>2°C – 12°C</strong>，早晚溫差大且體感偏冷，建議洋蔥式穿搭（發熱衣＋保暖中層＋防風外套、圍巾、好走的鞋）。</li>
+        <li><strong>日落時間</strong>：約 <strong>16:45 左右天黑</strong>，戶外古蹟、宮島與晚楓景點建議排在白天。</li>
+        <li><strong>鐵路周遊券建議</strong>：行程涵蓋「臨空城 → 廣島（山陽新幹線）→ 岡山 → 京都」，可評估購買 <strong>JR 西日本「關西＆廣島地區鐵路周遊券」（連續 5 日）</strong>，涵蓋 11/29 – 12/03 跨城新幹線與宮島渡輪，非常划算。</li>
+        <li><strong>支付準備</strong>：建議於 Apple Wallet 綁定 Suica／ICOCA，並備妥適量日幣現金（寺廟參拜費與部分老店僅收現金）。</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    2026 關西・廣島・岡山・京都 9 日旅遊手冊 · Last updated 2026-11-26
+  </footer>
+
+  <script type="module">
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: "base",
+      themeVariables: {
+        primaryColor: "#f9ebe8",
+        primaryBorderColor: "#b83b2a",
+        primaryTextColor: "#1f2421",
+        lineColor: "#7a5c53",
+        noteBkgColor: "#e9f1ee",
+        noteBorderColor: "#3f6256",
+        noteTextColor: "#1f2421",
+        actorBkg: "#ffffff",
+        actorBorder: "#b83b2a",
+        actorTextColor: "#1f2421",
+        fontFamily: '"Noto Sans TC", sans-serif'
+      }
+    });
+
+    const buttons = document.querySelectorAll(".filter-btn");
+    const cards = document.querySelectorAll(".day-card");
+
+    buttons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        buttons.forEach((b) => b.classList.remove("active"));
+        btn.classList.add("active");
+        const day = btn.dataset.day;
+        cards.forEach((card) => {
+          if (day === "all" || card.dataset.day === day) {
+            card.classList.remove("hidden");
+          } else {
+            card.classList.add("hidden");
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
