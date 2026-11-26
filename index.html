@@ -405,20 +405,46 @@
       background: #dce9e4;
     }
 
-    /* Mermaid Container */
-    .mermaid-wrap {
+    /* Transport Table */
+    .table-wrap {
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius);
-      padding: 1.2rem;
       box-shadow: var(--shadow);
       overflow-x: auto;
     }
 
-    .mermaid {
-      min-width: 640px;
-      display: flex;
-      justify-content: center;
+    .transport-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 680px;
+      font-size: 0.88rem;
+    }
+
+    .transport-table th,
+    .transport-table td {
+      text-align: left;
+      padding: 0.78rem 0.9rem;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+
+    .transport-table th {
+      background: var(--surface-soft);
+      font-weight: 600;
+      color: var(--text);
+      white-space: nowrap;
+    }
+
+    .transport-table tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    .time-badge {
+      display: inline-block;
+      font-weight: 600;
+      color: var(--accent);
+      white-space: nowrap;
     }
 
     /* Tips */
@@ -483,7 +509,7 @@
       <a class="nav-link" href="#itinerary">📅 每日行程</a>
       <a class="nav-link" href="#hotels">🏨 住宿總覽</a>
       <a class="nav-link" href="#dining">🍽 已預約餐廳</a>
-      <a class="nav-link" href="#flow">🗺 行程流程圖</a>
+      <a class="nav-link" href="#transport">🚆 交通時間表</a>
       <a class="nav-link" href="#tips">🧣 旅遊提醒</a>
     </div>
   </nav>
@@ -566,20 +592,20 @@
             <span class="tag tag-neutral">宿：OMO 關西機場</span>
           </div>
           <div class="slots">
-            <div class="slot"><span class="slot-label">上午</span><span>11:20 機場接送出發 → 前往桃園機場第二航廈（T2）辦理報到</span></div>
-            <div class="slot"><span class="slot-label">下午</span><span>14:20 搭乘中華航空 CI0172 飛往關西國際機場（KIX T1），預計 17:50 抵達</span></div>
-            <div class="slot"><span class="slot-label">晚上</span><span>入境領行李 → 搭 JR／南海電鐵至臨空城站（1 站）→ OMO 關西機場 Check-in → 臨空城周邊晚餐</span></div>
+            <div class="slot"><span class="slot-label">上午</span><span>11:20 機場接送出發 → 前往桃園機場 T2（車程約 45–60 分）辦理報到</span></div>
+            <div class="slot"><span class="slot-label">下午</span><span>14:20 搭乘中華航空 CI0172 飛往關西國際機場 KIX T1（飛行約 2 小時 30 分），預計 17:50 抵達</span></div>
+            <div class="slot"><span class="slot-label">晚上</span><span>入境領行李（約 40–60 分）→ 搭 JR／南海電鐵至臨空城站（車程約 5–6 分，含等車約 15 分）→ OMO 關西機場 Check-in（步行 1 分）→ 臨空城周邊晚餐</span></div>
           </div>
         </article>
 
         <article class="day-card" data-day="2">
           <div class="day-top">
-            <div class="day-heading"><span class="day-date">Day 2 · 11/29 (日)</span>臨空城 → 廣島・宮島</div>
+            <div class="day-heading"><span class="day-date">Day 2 · 11/29 (日)</span>臨空城 → 廣島・宮島（總移動約 3.5 小時）</div>
             <span class="tag tag-red">宿：界 宮島</span>
           </div>
           <div class="slots">
-            <div class="slot"><span class="slot-label">上午</span><span>OMO 關西機場 Check-out → 經新大阪轉乘山陽新幹線前往廣島</span></div>
-            <div class="slot"><span class="slot-label">下午</span><span>轉乘 JR 山陽本線至宮島口站（或前空站）→ 界 宮島（KAI Miyajima）Check-in（14:30 起）</span></div>
+            <div class="slot"><span class="slot-label">上午</span><span>OMO 關西機場 Check-out → 臨空城至新大阪（約 65–75 分，建議回機場轉 HARUKA）→ 轉乘山陽新幹線至廣島（Nozomi／Mizuho 約 80–85 分）</span></div>
+            <div class="slot"><span class="slot-label">下午</span><span>廣島轉乘 JR 山陽本線至宮島口站（約 25–30 分）→ 搭計程車至界 宮島（約 4 分；或前空站步行 12 分）→ 14:30 起 Check-in</span></div>
             <div class="slot"><span class="slot-label">晚上</span><span>界 宮島館內溫泉、晚餐</span></div>
           </div>
         </article>
@@ -590,7 +616,7 @@
             <span class="tag tag-red">宿：界 宮島</span>
           </div>
           <div class="slots">
-            <div class="slot"><span class="slot-label">上午</span><span class="slot-empty">行程待排（可預約旅館專屬碼頭船班直達宮島／嚴島神社）</span></div>
+            <div class="slot"><span class="slot-label">上午</span><span class="slot-empty">行程待排（旅館專屬碼頭船班直達宮島約 20 分／JR 宮島渡輪約 10 分）</span></div>
             <div class="slot"><span class="slot-label">下午</span><span class="slot-empty">行程待排</span></div>
             <div class="slot"><span class="slot-label">晚上</span><span>續住 界 宮島（KAI Miyajima）</span></div>
           </div>
@@ -598,13 +624,13 @@
 
         <article class="day-card" data-day="4">
           <div class="day-top">
-            <div class="day-heading"><span class="day-date">Day 4 · 12/01 (二)</span>廣島 → 岡山</div>
+            <div class="day-heading"><span class="day-date">Day 4 · 12/01 (二)</span>廣島 → 岡山（總移動約 1.5–1.75 小時）</div>
             <span class="tag tag-green">宿：岡山全日空皇冠假日</span>
           </div>
           <div class="slots">
-            <div class="slot"><span class="slot-label">上午</span><span>界 宮島 Check-out（11:00 前）→ 搭山陽新幹線前往岡山</span></div>
-            <div class="slot"><span class="slot-label">下午</span><span>岡山全日空皇冠假日酒店 Check-in（JR 岡山站直結）</span></div>
-            <div class="slot"><span class="slot-label">晚上</span><span>🍽 <strong>18:30 晚餐：岡山 VIA PACE（已預約）</strong></span></div>
+            <div class="slot"><span class="slot-label">上午</span><span>界 宮島 Check-out（11:00 前）→ 計程車至宮島口（約 4 分）→ JR 至廣島站（約 25–30 分）→ 山陽新幹線前往岡山（約 34–36 分）</span></div>
+            <div class="slot"><span class="slot-label">下午</span><span>岡山全日空皇冠假日酒店 Check-in（JR 岡山站空橋直結，步行約 1 分）</span></div>
+            <div class="slot"><span class="slot-label">晚上</span><span>🍽 <strong>18:30 晚餐：岡山 VIA PACE（已預約，飯店步行約 5–8 分）</strong></span></div>
           </div>
         </article>
 
@@ -622,12 +648,12 @@
 
         <article class="day-card" data-day="6">
           <div class="day-top">
-            <div class="day-heading"><span class="day-date">Day 6 · 12/03 (四)</span>岡山 → 京都</div>
+            <div class="day-heading"><span class="day-date">Day 6 · 12/03 (四)</span>岡山 → 京都（總移動約 1.3–1.75 小時）</div>
             <span class="tag tag-red">宿：京都二條自有住宅</span>
           </div>
           <div class="slots">
-            <div class="slot"><span class="slot-label">上午</span><span>岡山全日空皇冠假日酒店 Check-out（11:00 前）→ 搭新幹線前往京都</span></div>
-            <div class="slot"><span class="slot-label">下午</span><span>前往京都二條自有住宅放行李、市區行程待排</span></div>
+            <div class="slot"><span class="slot-label">上午</span><span>岡山全日空皇冠假日酒店 Check-out（11:00 前）→ 搭新幹線前往京都（直達約 60 分；若用 JR 周遊券於新大阪轉 JR 新快速約 45 分＋24 分）</span></div>
+            <div class="slot"><span class="slot-label">下午</span><span>京都車站轉 JR 嵯峨野線至二條站（快速約 4 分／普通 7–10 分）→ 前往京都二條自有住宅放行李、市區行程待排</span></div>
             <div class="slot"><span class="slot-label">晚上</span><span>宿：京都二條自有住宅</span></div>
           </div>
         </article>
@@ -640,7 +666,7 @@
           <div class="slots">
             <div class="slot"><span class="slot-label">上午</span><span class="slot-empty">行程待排</span></div>
             <div class="slot"><span class="slot-label">下午</span><span class="slot-empty">行程待排</span></div>
-            <div class="slot"><span class="slot-label">晚上</span><span>🍽 <strong>18:45 晚餐：京的燒肉處 弘 千本三條本店（已預約，近二條站）</strong></span></div>
+            <div class="slot"><span class="slot-label">晚上</span><span>🍽 <strong>18:45 晚餐：京的燒肉處 弘 千本三條本店（已預約，二條站周邊步行約 5–10 分）</strong></span></div>
           </div>
         </article>
 
@@ -658,12 +684,12 @@
 
         <article class="day-card" data-day="9">
           <div class="day-top">
-            <div class="day-heading"><span class="day-date">Day 9 · 12/06 (日)</span>京都 → 關西機場 → 返台</div>
+            <div class="day-heading"><span class="day-date">Day 9 · 12/06 (日)</span>京都 → 關西機場 → 返台（機場移動約 1.75–2 小時）</div>
             <span class="tag tag-green">返台</span>
           </div>
           <div class="slots">
-            <div class="slot"><span class="slot-label">上午</span><span>京都二條自有住宅出發 → 建議 09:00 前由京都車站搭 JR HARUKA 前往關西機場（KIX T1）報到</span></div>
-            <div class="slot"><span class="slot-label">下午</span><span>12:45 搭乘中華航空 CI0157 返台，預計 15:00 抵達桃園機場（TPE T2）</span></div>
+            <div class="slot"><span class="slot-label">上午</span><span>建議 08:30 前由京都二條自有住宅出發 → JR 嵯峨野線至京都車站（約 4–10 分）→ 搭 09:00 左右 JR HARUKA 前往關西機場 KIX T1（約 80–85 分）辦理報到</span></div>
+            <div class="slot"><span class="slot-label">下午</span><span>12:45 搭乘中華航空 CI0157 返台（飛行約 3 小時 15 分），預計 15:00 抵達桃園機場（TPE T2）</span></div>
             <div class="slot"><span class="slot-label">晚上</span><span>平安返家</span></div>
           </div>
         </article>
@@ -754,53 +780,88 @@
       </div>
     </section>
 
-    <!-- Mermaid Flow -->
-    <section id="flow">
-      <h2 class="section-title">每日行程流程圖</h2>
-      <div class="mermaid-wrap">
-        <div class="mermaid">
-sequenceDiagram
-    participant TPE as 台北 / 桃園機場
-    participant KIX as 關西機場 / 臨空城
-    participant HIJ as 廣島・宮島
-    participant OKJ as 岡山
-    participant KYO as 京都
-
-    Note over TPE,KIX: Day 1 - 11/28 (六)
-    TPE->>TPE: 11:20 機場接送出發 → 桃機 T2
-    TPE->>KIX: 14:20 CI0172 起飛 → 17:50 抵達 KIX T1
-    KIX->>KIX: 搭 JR/南海電鐵至臨空城站 → 入住 OMO 關西機場
-
-    Note over KIX,HIJ: Day 2 - 11/29 (日)
-    KIX->>HIJ: OMO 退房 → 經新大阪搭山陽新幹線至廣島/宮島口
-    HIJ->>HIJ: 14:30 起入住 界 宮島（KAI Miyajima）
-
-    Note over HIJ: Day 3 - 11/30 (一)
-    HIJ->>HIJ: 廣島・宮島一日遊（續住 界 宮島）
-
-    Note over HIJ,OKJ: Day 4 - 12/01 (二)
-    HIJ->>OKJ: 11:00 前退房 → 搭山陽新幹線前往岡山
-    OKJ->>OKJ: 入住 岡山全日空皇冠假日酒店
-    OKJ->>OKJ: 18:30 晚餐：VIA PACE（已預約）
-
-    Note over OKJ: Day 5 - 12/02 (三)
-    OKJ->>OKJ: 岡山周邊行程（續住 全日空皇冠假日酒店）
-
-    Note over OKJ,KYO: Day 6 - 12/03 (四)
-    OKJ->>KYO: 11:00 前退房 → 搭新幹線前往京都
-    KYO->>KYO: 入住 京都二條自有住宅
-
-    Note over KYO: Day 7 - 12/04 (五)
-    KYO->>KYO: 京都市區行程
-    KYO->>KYO: 18:45 晚餐：京的燒肉處 弘 千本三條本店（已預約）
-
-    Note over KYO: Day 8 - 12/05 (六)
-    KYO->>KYO: 京都行程（續住 京都二條自有住宅）
-
-    Note over KYO,TPE: Day 9 - 12/06 (日)
-    KYO->>KIX: 二條出發 → 建議 09:00 前由京都車站搭 JR HARUKA 往 KIX T1
-    KIX->>TPE: 12:45 CI0157 起飛 → 15:00 抵達桃機 T2
-        </div>
+    <!-- Transport Table -->
+    <section id="transport">
+      <h2 class="section-title">各段大眾運輸預估時間</h2>
+      <div class="table-wrap">
+        <table class="transport-table">
+          <thead>
+            <tr>
+              <th>日期</th>
+              <th>移動區段</th>
+              <th>建議交通方式</th>
+              <th>純車程</th>
+              <th>含轉乘預估</th>
+              <th>備註</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Day 1</strong><br />11/28 (六)</td>
+              <td>關西機場 → OMO 關西機場</td>
+              <td>JR 關西機場線或南海機場線至臨空城站＋步行 1 分</td>
+              <td>約 5–6 分</td>
+              <td><span class="time-badge">約 15 分</span></td>
+              <td>僅 1 站，班次密集</td>
+            </tr>
+            <tr>
+              <td><strong>Day 2</strong><br />11/29 (日)</td>
+              <td>臨空城 → 新大阪</td>
+              <td>路線 A：回關西機場 (6 分) 轉 JR HARUKA (50 分)<br />路線 B：JR 關空快速至大阪 (60–65 分) 轉 JR 至新大阪 (4 分)</td>
+              <td>56 分 / 65–70 分</td>
+              <td><span class="time-badge">約 65–75 分</span></td>
+              <td>HARUKA 不停臨空城；帶大行李建議路線 A</td>
+            </tr>
+            <tr>
+              <td><strong>Day 2</strong><br />11/29 (日)</td>
+              <td>新大阪 → 廣島</td>
+              <td>山陽新幹線（Nozomi / Mizuho）</td>
+              <td>約 80–85 分</td>
+              <td><span class="time-badge">約 90 分</span></td>
+              <td>Sakura 約 90–95 分</td>
+            </tr>
+            <tr>
+              <td><strong>Day 2</strong><br />11/29 (日)</td>
+              <td>廣島 → 界 宮島</td>
+              <td>JR 山陽本線至宮島口站 (25–30 分)＋計程車 (4 分)<br />或前空站 (30–35 分)＋步行 12 分</td>
+              <td>約 30–35 分</td>
+              <td><span class="time-badge">約 45 分</span></td>
+              <td>帶行李建議宮島口站搭計程車</td>
+            </tr>
+            <tr>
+              <td><strong>Day 3</strong><br />11/30 (一)</td>
+              <td>界 宮島 → 宮島島上</td>
+              <td>旅館專屬碼頭合作船班（需預約）或 JR 宮島渡輪</td>
+              <td>約 20 分（JR 渡輪 10 分）</td>
+              <td><span class="time-badge">約 20–30 分</span></td>
+              <td>JR 關西＆廣島周遊券涵蓋 JR 渡輪</td>
+            </tr>
+            <tr>
+              <td><strong>Day 4</strong><br />12/01 (二)</td>
+              <td>界 宮島 → 廣島 → 岡山</td>
+              <td>計程車至宮島口 (4 分) → JR 至廣島 (25–30 分) → 新幹線至岡山 (34–36 分) → 步行 1 分</td>
+              <td>約 65–70 分</td>
+              <td><span class="time-badge">約 1.5–1.75 小時</span></td>
+              <td>飯店與 JR 岡山站直結；步行至 VIA PACE 約 5–8 分</td>
+            </tr>
+            <tr>
+              <td><strong>Day 6</strong><br />12/03 (四)</td>
+              <td>岡山 → 京都 → 二條</td>
+              <td>單買票：新幹線直達京都 (60 分) → 嵯峨野線至二條 (4–10 分)<br />用 JR 周遊券：新幹線至新大阪 (45 分) → JR 新快速至京都 (24 分) → 嵯峨野線至二條 (4–10 分)</td>
+              <td>65–70 分 / 75–80 分</td>
+              <td><span class="time-badge">約 1.3–1.75 小時</span></td>
+              <td>JR 關西＆廣島周遊券不含新大阪–京都東海道新幹線，須於新大阪換 JR 在來線</td>
+            </tr>
+            <tr>
+              <td><strong>Day 9</strong><br />12/06 (日)</td>
+              <td>二條 → 京都 → 關西機場</td>
+              <td>JR 嵯峨野線至京都 (4–10 分) → JR 特急 HARUKA 直達 KIX T1 (80–85 分)</td>
+              <td>約 85–95 分</td>
+              <td><span class="time-badge">約 1.75–2 小時</span></td>
+              <td>建議 08:30 前二條出發，搭 09:00 左右 HARUKA</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
@@ -810,7 +871,7 @@ sequenceDiagram
       <ul class="tips-list">
         <li><strong>氣候與穿搭</strong>：11 月底至 12 月初京都／廣島／岡山氣溫約 <strong>2°C – 12°C</strong>，早晚溫差大且體感偏冷，建議洋蔥式穿搭（發熱衣＋保暖中層＋防風外套、圍巾、好走的鞋）。</li>
         <li><strong>日落時間</strong>：約 <strong>16:45 左右天黑</strong>，戶外古蹟、宮島與晚楓景點建議排在白天。</li>
-        <li><strong>鐵路周遊券建議</strong>：行程涵蓋「臨空城 → 廣島（山陽新幹線）→ 岡山 → 京都」，可評估購買 <strong>JR 西日本「關西＆廣島地區鐵路周遊券」（連續 5 日）</strong>，涵蓋 11/29 – 12/03 跨城新幹線與宮島渡輪，非常划算。</li>
+        <li><strong>鐵路周遊券建議</strong>：行程涵蓋「臨空城 → 廣島（山陽新幹線）→ 岡山 → 京都」，可評估購買 <strong>JR 西日本「關西＆廣島地區鐵路周遊券」（連續 5 日）</strong>，涵蓋 11/29 – 12/03 跨城新幹線與宮島渡輪（12/03 回京都需於新大阪轉 JR 在來線）。</li>
         <li><strong>支付準備</strong>：建議於 Apple Wallet 綁定 Suica／ICOCA，並備妥適量日幣現金（寺廟參拜費與部分老店僅收現金）。</li>
       </ul>
     </section>
@@ -820,26 +881,7 @@ sequenceDiagram
     2026 關西・廣島・岡山・京都 9 日旅遊手冊 · Last updated 2026-11-26
   </footer>
 
-  <script type="module">
-    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs";
-    mermaid.initialize({
-      startOnLoad: true,
-      theme: "base",
-      themeVariables: {
-        primaryColor: "#f9ebe8",
-        primaryBorderColor: "#b83b2a",
-        primaryTextColor: "#1f2421",
-        lineColor: "#7a5c53",
-        noteBkgColor: "#e9f1ee",
-        noteBorderColor: "#3f6256",
-        noteTextColor: "#1f2421",
-        actorBkg: "#ffffff",
-        actorBorder: "#b83b2a",
-        actorTextColor: "#1f2421",
-        fontFamily: '"Noto Sans TC", sans-serif'
-      }
-    });
-
+  <script>
     const buttons = document.querySelectorAll(".filter-btn");
     const cards = document.querySelectorAll(".day-card");
 
